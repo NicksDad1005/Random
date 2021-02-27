@@ -1,0 +1,9 @@
+_G.Col = true
+while _G.Col do
+   for i,v in pairs(game:GetService("Workspace").Client.Worlds["Ancient Palace"].Collectables.Projectiles:GetDescendants()) do
+       if v:IsA("MeshPart") then
+           v.CFrame = game.workspace[game.Players.LocalPlayer.Name].HumanoidRootPart.CFrame
+       end
+   end
+   wait(0.4)
+end
